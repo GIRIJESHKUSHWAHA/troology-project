@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <br />
+    <div class="center">
+        <legend>Update Profile:</legend>
+        <form action="/user/edit/{{user._id}}" method="POST">
+            <input type="hidden" name="_method" value="PUT">
+            <div>
+                <label>name</label>
+                <input name="name" value={{user.name }}></input>
+                </br></br><label>mobile</label>
+                <input name="mobile" value={{user.mobile }}></input>
+                </br></br><label>email</label>
+                <input name="email" value={{user.email }} disabled></input>
+                </br></br><label>address</label>
+                <input name="address" value={{user.address }}></input>
+            </div>
+            <br />
+            <div>
+                <button type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
